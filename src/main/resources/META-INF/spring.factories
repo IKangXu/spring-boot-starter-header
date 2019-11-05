@@ -1,0 +1,14 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+<<<<<<< HEAD
+com.ikangxu.header.registrar.ImportHeaderRegistrar,\
+com.ikangxu.header.rest.HeaderRestTemplateAutoConfiguration,\
+com.ikangxu.header.web.HeaderHandlerInterceptorConfiguration,\
+com.ikangxu.header.feign.HeaderFeignClientAutoConfiguration,\
+com.ikangxu.header.feign.hystrix.HeaderHystrixAutoConfiguration
+=======
+cn.ikangxu.boot.header.registrar.ImportHeaderRegistrar,\
+cn.ikangxu.boot.header.rest.HeaderRestTemplateAutoConfiguration,\
+cn.ikangxu.boot.header.web.HeaderHandlerInterceptorConfiguration,\
+cn.ikangxu.boot.header.feign.HeaderFeignClientAutoConfiguration,\
+cn.ikangxu.boot.header.feign.hystrix.HeaderHystrixAutoConfiguration
+>>>>>>> 初始化项目并修改Feign调用封装和完善部分文档
