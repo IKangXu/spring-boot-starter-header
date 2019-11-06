@@ -56,4 +56,4 @@
 
 ### 测试情况
 
-请参考测试 [DEMO](https://github.com/IKangXu/ikx-demo)
+请参考测试 [DEMO](https://github.com/IKangXu/ikx-demo/tree/master/header)
