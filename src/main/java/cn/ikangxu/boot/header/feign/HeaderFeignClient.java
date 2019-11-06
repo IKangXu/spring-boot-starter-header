@@ -81,9 +81,9 @@ public class HeaderFeignClient implements Client {
             if (StringUtils.isEmpty(val)) {
                 val = servletRequest.getParameter(key);
             }
-            if(StringUtils.isEmpty(val)) {
+            if(!StringUtils.isEmpty(val)) {
                 List<String> headerVal = new ArrayList<>();
-                headerVal.add(key);
+                headerVal.add(val);
                 headers.put(key, headerVal);
             }
         }

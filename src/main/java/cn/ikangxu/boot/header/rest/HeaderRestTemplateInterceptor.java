@@ -53,7 +53,7 @@ public class HeaderRestTemplateInterceptor implements ClientHttpRequestIntercept
             if (StringUtils.isEmpty(val)) {
                 val = request.getParameter(key);
             }
-            if(StringUtils.isEmpty(val)) {
+            if(!StringUtils.isEmpty(val)) {
                 requestWrapper.getHeaders().add(key, val);
             }
         }

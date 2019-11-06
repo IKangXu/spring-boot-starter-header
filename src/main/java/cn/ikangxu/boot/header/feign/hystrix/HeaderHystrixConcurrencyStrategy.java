@@ -90,7 +90,7 @@ public class HeaderHystrixConcurrencyStrategy extends HystrixConcurrencyStrategy
                         val = servletRequest.getParameter(key);
                     }
 
-                    if(StringUtils.isEmpty(val)) {
+                    if(!StringUtils.isEmpty(val)) {
                         RootHeader.bind(key, val);
                     }
                 }
