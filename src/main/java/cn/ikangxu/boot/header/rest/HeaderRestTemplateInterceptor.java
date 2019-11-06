@@ -41,18 +41,7 @@ public class HeaderRestTemplateInterceptor implements ClientHttpRequestIntercept
         for(int i= 0; i < keys.length; i++) {
             String key = keys[i];
 
-            // 从header中获取token
-            String val = request.getHeader(key);
-
-            // 如果header中不存在token，则从COOKIE中获取
-            if (StringUtils.isEmpty(val)) {
-                val = CookieUtils.getCookie(key);
-            }
-
-            // 如果header中不存在token，则从参数中获取token
-            if (StringUtils.isEmpty(val)) {
-                val = request.getParameter(key);
-            }
+            String val = RootHeader.get(key);
             if(!StringUtils.isEmpty(val)) {
                 requestWrapper.getHeaders().add(key, val);
             }

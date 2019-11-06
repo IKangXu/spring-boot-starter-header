@@ -32,6 +32,10 @@ public class ThreadLocalHeaderContext implements HeaderContext {
         return (String)((Map)this.threadLocal.get()).get(key);
     }
 
+    public Map list() {
+        return (Map)this.threadLocal.get();
+    }
+
     public String remove(String key) {
         return (String)((Map)this.threadLocal.get()).remove(key);
     }

@@ -4,6 +4,8 @@
 
 package cn.ikangxu.boot.header;
 
+import java.util.Map;
+
 /**
  *
  * @className HeaderContext
@@ -16,6 +18,8 @@ public interface HeaderContext {
     String put(String key, String val);
 
     String get(String key);
+
+    Map list();
 
     String remove(String key);
 }

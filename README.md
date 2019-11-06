@@ -26,6 +26,11 @@
 
 
 ### 新方式
+项目暂时未入Maven仓库，需要自己下载下来编辑项目
+
+执行以下命令，将包添加到本地Maven仓库中
+
+`mvn.cmd install:install-file -Dfile=D:\github\spring-boot-starter-header\target\spring-boot-starter-header.jar -DgroupId=cn.ikangxu -DartifactId=spring-boot-starter-header -Dversion=1.0.0 -Dpackaging=jar`
 
 引入以下依赖
 
@@ -50,7 +55,7 @@
 | 支持 | 完成情况 | 测试情况 |
 | :------| :------ | :------ |
 | Feign | 已完成 | 已通过 |
-| Ribbon | 未开始 | - |
+| Ribbon | 已完成 | 已通过 |
 | HttpClient | 未开始 | - |
 
 
