@@ -50,13 +50,71 @@
 
 ![简洁调用方式，无需担心传递参数的问题](./doc/img/img_03.png)
 
+### HttpClient与HttpURLConnection调用方式
+
+```yaml
+cn:
+  ikangxu:
+    request:
+      httpclient:
+        charset: UTF-8
+        connect-timeout: 5000
+        connection-request-timeout: 5000
+        socket-timeout: 15000
+      net:
+        charset: UTF-8
+        do-output: true
+        do-input: true
+        use-caches: false
+        connect-timeout: 5000
+        read-timeout: 5000
+```
+
+以上是默认配置文件，如果需要变动上面的值，需要将以上配置添加到自己程序中的配置文件
+
+调用方式，也是采用`@EnableHeader({"testHeader1","testHeader2"})`这样的注解方式
+
+然后，程序中内置了两个模板，一个`HttpClientTemplate`、一个`HttpURLTemplate`
+
+> HttpClientTemplate
+
+```java
+    @Autowired
+    private HttpClientTemplate httpClientTemplate;
+    
+    @GetMapping("sayHelloHttpClient")
+    public String sayHelloHttpClient() {
+        Map<String, String> params = new HashMap<>();
+        params.put("testParam", "httpClientTemplate");
+        return httpClientTemplate.getEntity("http://localhost:4201/api/sayHello", params);
+    }
+```
+
+> HttpURLTemplate
+
+```java
+    @Autowired
+    private HttpURLTemplate httpURLTemplate;
+	
+    @GetMapping("sayHelloHttpURL")
+    public String sayHelloHttpURL() {
+        Map<String, Object> params = new HashMap<>();
+        params.put("testParam", "222");
+        return httpURLTemplate.getEntity("http://localhost:4201/api/sayHello", params);
+    }
+```
+
+以上简单的方式就可以实现外部链接的调用
+
 ### 完成计划
 
 | 支持 | 完成情况 | 测试情况 |
 | :------| :------ | :------ |
 | Feign | 已完成 | 已通过 |
 | Ribbon | 已完成 | 已通过 |
-| HttpClient | 未开始 | - |
+| HttpClient | 已完成 | 已通过 |
+| HttpURLConnection | 已完成 | 已通过 |
+| OkHttp | - | - |
 
 
 ### 测试情况

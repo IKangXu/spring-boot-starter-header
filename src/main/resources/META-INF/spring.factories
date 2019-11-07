@@ -3,4 +3,9 @@ cn.ikangxu.boot.header.registrar.ImportHeaderRegistrar,\
 cn.ikangxu.boot.header.rest.HeaderRestTemplateAutoConfiguration,\
 cn.ikangxu.boot.header.web.HeaderHandlerInterceptorConfiguration,\
 cn.ikangxu.boot.header.feign.HeaderFeignClientAutoConfiguration,\
-cn.ikangxu.boot.header.feign.hystrix.HeaderHystrixAutoConfiguration
+cn.ikangxu.boot.header.feign.hystrix.HeaderHystrixAutoConfiguration,\
+cn.ikangxu.boot.header.util.SpringContextUtils,\
+cn.ikangxu.boot.header.common.PropertiesConst,\
+cn.ikangxu.boot.header.common.request.httpclient.HttpClientTemplate,\
+cn.ikangxu.boot.header.common.request.net.HttpURLTemplate
+
