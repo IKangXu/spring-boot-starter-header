@@ -114,7 +114,6 @@ cn:
 | Ribbon | 已完成 | 已通过 |
 | HttpClient | 已完成 | 已通过 |
 | HttpURLConnection | 已完成 | 已通过 |
-| OkHttp | - | - |
 
 
 ### 测试情况

@@ -13,12 +13,11 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Component;
 
 /**
- *
- * @className SpringContextUtils
- * @description 
  * @author kangxu [xukang@engine3d.com]
- * @date 2019/11/7 9:24
  * @version v1.0
+ * @className SpringContextUtils
+ * @description
+ * @date 2019/11/7 9:24
  */
 @Component("springContextUtils")
 public class SpringContextUtils implements ApplicationContextAware {
@@ -31,27 +30,27 @@ public class SpringContextUtils implements ApplicationContextAware {
     }
 
     public static Object getBean(String name) {
-        return applicationContext.getBean(name);
+        return null == applicationContext ? null : applicationContext.getBean(name);
     }
 
     public static <T> T getBean(String name, Class<T> requiredType) {
-        return applicationContext.getBean(name, requiredType);
+        return null == applicationContext ? null : applicationContext.getBean(name, requiredType);
     }
 
     public static boolean containsBean(String name) {
-        return applicationContext.containsBean(name);
+        return null == applicationContext ? false : applicationContext.containsBean(name);
     }
 
     public static boolean isSingleton(String name) {
-        return applicationContext.isSingleton(name);
+        return null == applicationContext ? false : applicationContext.isSingleton(name);
     }
 
     public static Object getProperty(String key) {
-        return applicationContext.getEnvironment().getProperty(key);
+        return null == applicationContext ? null : applicationContext.getEnvironment().getProperty(key);
     }
 
     public static Class<? extends Object> getType(String name) {
-        return applicationContext.getType(name);
+        return null == applicationContext ? null : applicationContext.getType(name);
     }
 
 }
