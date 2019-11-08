@@ -13,6 +13,31 @@
 而接下来，我们要讨论的事情就是微服务之间项目调用，而存在Token传递的问题。    
 现在微服务之间项目调用我们可以采用Feign、Ribbon等方式进行调动，而这些开源服务，本身是不会帮你去封装Token的，所以，我们需要自己手动去重写里面的服务，把相应的头信息在服务之间进行传递
 
+### 准备
+
+如果文章中图片显示不了，请打开hosts文件，添加一下配置
+
+```text
+# GitHub Start 
+192.30.253.112    github.com 
+192.30.253.119    gist.github.com
+151.101.184.133    assets-cdn.github.com
+151.101.184.133    raw.githubusercontent.com
+151.101.184.133    gist.githubusercontent.com
+151.101.184.133    cloud.githubusercontent.com
+151.101.184.133    camo.githubusercontent.com
+151.101.184.133    avatars0.githubusercontent.com
+151.101.184.133    avatars1.githubusercontent.com
+151.101.184.133    avatars2.githubusercontent.com
+151.101.184.133    avatars3.githubusercontent.com
+151.101.184.133    avatars4.githubusercontent.com
+151.101.184.133    avatars5.githubusercontent.com
+151.101.184.133    avatars6.githubusercontent.com
+151.101.184.133    avatars7.githubusercontent.com
+151.101.184.133    avatars8.githubusercontent.com
+# GitHub End
+```
+
 ### 传统方式
 
 > Feign调用方式
