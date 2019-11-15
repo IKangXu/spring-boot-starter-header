@@ -1,5 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-cn.ikangxu.boot.header.registrar.ImportHeaderRegistrar,\
 cn.ikangxu.boot.header.rest.HeaderRestTemplateAutoConfiguration,\
 cn.ikangxu.boot.header.web.HeaderHandlerInterceptorConfiguration,\
 cn.ikangxu.boot.header.feign.HeaderFeignClientAutoConfiguration,\
